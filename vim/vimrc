@@ -74,10 +74,10 @@ set autoread
 " set autowrite
 set ruler                   " 打开状态栏标尺
 set cursorline              " 突出显示当前行
+set cursorcolumn            " 突出显示当前列
 
-"set cursorcolumn            " 突出显示当前列
 highlight CursorLine   cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE "对highlight配色
-"highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE
 set magic                   " 设置魔术
 
 " set guioptions-=T           " 隐藏工具栏
