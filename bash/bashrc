@@ -131,3 +131,9 @@ rg() {
             exit
         fi
 }
+
+#避免ranger重复载入配置文件
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+#引入pycaffe路径
+export PYTHONPATH=/home/tianws/source/caffe/build/install/python:$PYTHONPATH
