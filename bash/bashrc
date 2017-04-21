@@ -137,3 +137,6 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 #引入pycaffe路径
 export PYTHONPATH=/home/tianws/source/caffe/build/install/python:$PYTHONPATH
+
+#my alise
+alias sshx='ssh -X'
