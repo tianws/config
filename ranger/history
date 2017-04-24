@@ -1,5 +1,9 @@
 shell mkdir project
-
 shell sh clion.sh &
 open_wit
 find Opencv
+find v
+find python2
+open_with
+open_with 
+
