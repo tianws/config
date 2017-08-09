@@ -1,0 +1,10 @@
+Host tianws-pc
+    HostName 172.22.52.32
+    Port 22
+
+Host yy
+    HostName 172.22.52.68
+    Port 22
+
+Host *
+    User tianws
