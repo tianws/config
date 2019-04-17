@@ -65,6 +65,8 @@ plugins=(
   git
   zsh-autosuggestions
   colored-man-pages
+  zsh-syntax-highlighting
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -127,9 +129,28 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}/usr/local/cuda/extras/CUPTI/lib64
 
-# added by Miniconda2 installer
-export PATH="/home/tianws/3rd-source/miniconda2/bin:$PATH"
-unsetopt correct_all
-unsetopt AUTO_CD
-setopt noautomenu
-setopt nomenucomplete
+# unsetopt correct_all
+# unsetopt AUTO_CD
+# setopt noautomenu
+# setopt nomenucomplete
+
+## added by Miniconda3 4.5.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/tianws/opt/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/tianws/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/tianws/opt/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/tianws/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+
+alias dockerrun='docker run --runtime=nvidia -it --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) --name=seg segmentation-dependence'
+
+source /etc/zsh_command_not_found
