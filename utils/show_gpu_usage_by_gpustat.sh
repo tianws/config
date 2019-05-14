@@ -3,6 +3,7 @@
 # Simplify Your Life With an SSH Config File
 # http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
 # 要注意ssh command的环境变量的问题，在~/.bashrc里面把加载环境变量语句放到开头
+# 或者放到~/.zshenv
 
 sep()
 {
