@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize cp copydir z)
+plugins=(git colorize cp copydir z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,6 +85,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 ##避免在ranger启动的shell内创建新的ranger
 rg() {
@@ -100,7 +104,7 @@ rg() {
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 #引入pycaffe路径
-export PYTHONPATH=/home/tianws/source/caffe/build/install/python:$PYTHONPATH
+# export PYTHONPATH=/home/tianws/source/caffe/build/install/python:$PYTHONPATH
 
 #my alise
 alias sshx='ssh -X'
@@ -110,3 +114,4 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 DEFAULT_USER=`whoami`
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /etc/zsh_command_not_found # zsh 提示

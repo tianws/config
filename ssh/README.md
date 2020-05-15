@@ -39,8 +39,3 @@ vim /etc/hosts
 
 10.10.24.107 aa
 
-
-另外：
-data公用账户
-user:data
-passwd:jishu2
