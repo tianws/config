@@ -1,0 +1,423 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    // --- 全局命令
+    // 显示命令面板
+    {
+        "key": "ctrl+g c",
+        "command": "workbench.action.showCommands"
+    },
+    // 打开设置页面
+    {
+        "key": "ctrl+g s",
+        "command": "workbench.action.openSettings"
+    },
+    // 打开热键映射
+    {
+        "key": "ctrl+g k",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    // 打开一个目录
+    {
+        "key": "ctrl+g d",
+        "command": "workbench.action.files.openFolder"
+    },
+    // 打开一个文件
+    {
+        "key": "ctrl+g f",
+        "command": "workbench.action.files.openFile"
+    },
+    // 打开最近记录
+    {
+        "key": "ctrl+g h",
+        "command": "workbench.action.openRecent"
+    },
+    // 新建vscode实例
+    {
+        "key": "ctrl+g n",
+        "command": "workbench.action.newWindow"
+    },
+    // 关闭vscode实例
+    {
+        "key": "ctrl+g q",
+        "command": "workbench.action.closeWindow"
+    },
+    // // --- 文件命令
+    // // 新建文件
+    // {
+    //     "key": "ctrl+f n",
+    //     "command": "welcome.showNewFileEntries",
+    // },
+    // // 打开文件
+    // {
+    //     "key": "ctrl+f o",
+    //     "command": "workbench.action.files.openFileFolder"
+    // },
+    // // 另存为文件
+    // {
+    //     "key": "ctrl+f e",
+    //     "command": "workbench.action.files.saveAs"
+    // },
+    // // 保存文件
+    // {
+    //     "key": "ctrl+f s",
+    //     "command": "workbench.action.files.save"
+    // },
+    // // 保存所有文件
+    // {
+    //     "key": "ctrl+f w",
+    //     "command": "workbench.action.files.saveAll"
+    // },
+    // // 关闭文件
+    // {
+    //     "key": "ctrl+f q",
+    //     "command": "workbench.action.closeActiveEditor"
+    // },
+    // // 关闭所有文件
+    // {
+    //     "key": "ctrl+f a",
+    //     "command": "workbench.action.closeAllEditors"
+    // },
+    // // -- 侧边栏命令
+    // 切换侧边栏显示状态
+    {
+        "key": "ctrl+shift+alt+q",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    // 下一个侧边栏
+    {
+        "key": "alt+q",
+        "command": "workbench.action.nextSideBarView"
+    },
+    // 上一个侧边栏
+    {
+        "key": "shift+alt+q",
+        "command": "workbench.action.previousSideBarView"
+    },
+     // // 切换侧边栏显示状态
+    // {
+    //     "key": "ctrl+n [",
+    //     "command": "workbench.action.toggleSidebarVisibility"
+    // },
+    // // 显示文件资源管理器
+    // {
+    //     "key": "ctrl+n 1",
+    //     "command": "workbench.files.action.focusFilesExplorer"
+    // },
+    // // 显示TODO Tree
+    // // {
+    // //     "key": "ctrl+n 2",
+    // //     "command": "todo-tree-view.focus"
+    // // },
+    // // 显示全局搜索
+    // {
+    //     "key": "ctrl+n 2",
+    //     "command": "workbench.action.replaceInFiles",
+    // },
+    // // 显示版本控制
+    // {
+    //     "key": "ctrl+n 3",
+    //     "command": "workbench.view.scm",
+    //     "when": "workbench.scm.active"
+    // },
+    // // 显示debug
+    // {
+    //     "key": "ctrl+n 4",
+    //     "command": "workbench.view.debug",
+    //     "when": "viewContainer.workbench.view.debug.enabled"
+    // },
+    // // 显示插件商店
+    // {
+    //     "key": "ctrl+n 5",
+    //     "command": "workbench.view.extensions",
+    //     "when": "viewContainer.workbench.view.extensions.enabled"
+    // },
+    // // // 显示SQL Tools
+    // // {
+    // //     "key": "ctrl+n 6",
+    // //     "command": "workbench.view.extension.sqltoolsActivityBarContainer"
+    // // },
+    // // 显示Docker
+    // // {
+    // //     "key": "ctrl+n 7",
+    // //     "command": "workbench.view.extension.dockerView"
+    // // },
+    // // 显示测试
+    // {
+    //     "key": "ctrl+n 7",
+    //     "command": "workbench.view.testing.focus"
+    // },
+    // --- 面板命令
+    // 切换面板显示状态
+    {
+        "key": "ctrl+shift+alt+w",
+        "command": "workbench.action.togglePanel"
+    },
+    // 下一个面板
+    {
+        "key": "alt+w",
+        "command": "workbench.action.nextPanelView"
+    },
+    // 上一个面板
+    {
+        "key": "shift+alt+w",
+        "command": "workbench.action.previousPanelView"
+    },
+    // 切换面板显示状态
+    // {
+    //     "key": "ctrl+p [",
+    //     "command": "workbench.action.togglePanel"
+    // },
+    // // 显示问题
+    // {
+    //     "key": "ctrl+p 1",
+    //     "command": "workbench.panel.markers.view.focus"
+    // },
+    // // 显示输出
+    // {
+    //     "key": "ctrl+p 2",
+    //     "command": "workbench.action.output.toggleOutput",
+    //     "when": "workbench.panel.output.active"
+    // },
+    // // 显示终端
+    // {
+    //     "key": "ctrl+p 3",
+    //     "command": "workbench.action.terminal.toggleTerminal",
+    //     "when": "terminal.active"
+    // },
+    // // 显示调试控制台
+    // {
+    //     "key": "ctrl+p 4",
+    //     "command": "workbench.debug.action.toggleRepl",
+    //     "when": "workbench.panel.repl.view.active"
+    // },
+    // 显示SQL CONSOLE
+    // {
+    //     "key": "ctrl+p 5",
+    //     "command": "workbench.view.extension.sqltoolsPanelContainer"
+    // },
+    // --- 编辑区命令
+   // 切换到上一个选项卡
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.previousEditor"
+    },
+    // 切换到下一个选项卡
+    {
+        "key": "ctrl+.",
+        "command": "workbench.action.nextEditor",
+    },
+    // 整行向上复制
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // 整行向下复制
+    {
+        "key": "shift+ctrl+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // 光标移动到行首
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        // "when": "textInputFocus"
+    },
+    // 光标移动到行尾
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        // "when": "textInputFocus"
+    },
+    // 左移一个词
+    {
+        "key": "alt+b",
+        "command": "cursorWordLeft",
+        // "when": "textInputFocus"
+    },
+    // 右移一个词
+    {
+        "key": "alt+f",
+        "command": "cursorWordEndRight",
+        // "when": "textInputFocus"
+    },
+    // 左移一个字符
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        // "when": "textInputFocus"
+    },
+    // 右移一个字符
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        // "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    // 删除左边全部
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        // "when": "textInputFocus && !editorReadonly"
+    },
+    // 删除右边全部
+    {
+        "key": "ctrl+u",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+   // --- 代码编辑命令
+    // 触发帮助提示
+    {
+        "key": "alt+h",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    // 触发参数提示
+    {
+        "key": "alt+j",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "closeParameterHints",
+        "when": "editorFocus && parameterHintsVisible"
+    },
+    // 触发建议提示
+    {
+        "key": "alt+k",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+k",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    // 移动到下一个建议
+    {
+        "key": "alt+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    // 移动到上一个建议
+    {
+        "key": "alt+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    // 打开快速修复
+    {
+        "key": "alt+m",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    // 格式化选中代码
+    {
+        "key": "ctrl+alt+l",
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    // 格式化全部代码
+    {
+        "key": "ctrl+shift+alt+l",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    // 放大字体
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    // 缩小字体
+    {
+        "key": "ctrl+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    // 前进
+    {
+        "key": "ctrl+alt+k",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    // 后退
+    {
+        "key": "ctrl+alt+j",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    // --- 资源管理器中对文件或目录的操作
+    // 新建文件
+    {
+        "key": "i",
+        "command": "explorer.newFile",
+        "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    },
+    // 新建目录
+    {
+        "key": "o",
+        "command": "explorer.newFolder",
+        "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    },
+    // 刷新资源管理器
+    {
+        "key": "r",
+        "command": "workbench.files.action.refreshFilesExplorer",
+        "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    },
+    // 重命名文件或目录
+    {
+        "key": "a",
+        "command": "renameFile",
+        "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    },
+    // 删除文件或目录
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    },
+    // 剪切文件或目录
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    // 复制文件或目录
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    // 粘贴文件或目录
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    // 打开禅模式    
+    // {
+    //     "key": "ctrl+p z",
+    //     "command": "workbench.action.toggleZenMode"
+    // },
+    // 关闭当前编辑器
+    {
+        "key": "ctrl+w c",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    // --- 运行调试命令
+    // 终端运行当前python文件
+    {
+        "key": "shift+f2",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+]
