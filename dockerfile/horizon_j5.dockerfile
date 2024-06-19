@@ -67,10 +67,10 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
      curl "https://raw.githubusercontent.com/tianws/config/master/zsh/themes/robbyrussell.zsh-theme-server" -o .oh-my-zsh/custom/themes/robbyrussell.zsh-theme && \
      git clone https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions && \
      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .oh-my-zsh/custom/plugins/zsh-syntax-highlighting && \
-     sed -i "s/^plugins=.*$/plugins=(git colorize cp z zsh-autosuggestions zsh-syntax-highlighting)/" .zshrc
+     sed -i "s/^plugins=.*$/plugins=(git colorize z zsh-autosuggestions zsh-syntax-highlighting)/" .zshrc
 
 # 配置环境变量，使ssh连接时env也生效
-RUN sed -i '$a\export $(cat /proc/1/environ |tr "\\0" "\\n" | xargs)' ~/.bashrc
+RUN sed -i '$a\export $(cat /proc/1/environ |tr "\\0" "\\n" | xargs)' ~/.zshrc
 
 # 配置vim
 RUN curl "https://raw.githubusercontent.com/tianws/config/master/vim/vimrc" -o .vimrc
@@ -86,18 +86,23 @@ RUN curl "https://raw.githubusercontent.com/tianws/config/master/tmux/tmux_serve
 #修改/etc/ssh/sshd_config
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 RUN sed -i "s/#UseDNS.*/UseDNS no/g" /etc/ssh/sshd_config
-RUN sed -i "s/#PermitRootLogin*/PermitRootLogin yes/g" /etc/ssh/sshd_config
+RUN sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
 
 # 生成sshkey
-# RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
-# RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
-# RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
-# RUN ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ''
-# RUN ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key  -N ''
-RUN mkdir /var/run/sshd
 # 添加公钥(如果没有公钥可以省略)
 RUN mkdir /root/.ssh
 # RUN echo 'ssh-rsa YOU_PUB_KEY' > /root/authorized_keys
+# RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+# RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+# RUN rm /etc/ssh/ssh_host_rsa_key && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+# RUN rm /etc/ssh/ssh_host_ecdsa_key && ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ''
+# RUN rm /etc/ssh/ssh_host_ed25519_key && ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key  -N ''
+RUN mkdir /var/run/sshd
+
+# Create an SSH user
+# RUN useradd -rm -d /home/sshuser -s /bin/bash -g root -G sudo -u 1000 sshuser
+# Set the SSH user's password (replace "password" with your desired password)
+# RUN echo 'sshuser:password' | chpasswd
 
 #变更root密码
 RUN echo "root:111111"|chpasswd
@@ -108,8 +113,11 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
 
+RUN chsh -s $(which zsh)
+
 # ENTRYPOINT ["fixuid"]
 # CMD echo ${PASSWD} | sudo -S service ssh start && /bin/zsh
 # CMD ["sh", "-c", "/usr/sbin/sshd && tail -f /dev/null"]
 #运行脚本，启动sshd服务
-CMD    ["/usr/sbin/sshd", "-D"]
+# CMD ["/usr/sbin/sshd", "-D"]
+# CMD ["/bin/zsh"]
