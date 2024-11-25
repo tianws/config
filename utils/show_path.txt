@@ -1,0 +1,1 @@
+/home/tianws/.local/bin/show_gpu_usage_by_gpustat.sh
