@@ -1,10 +1,132 @@
-Host tianws-pc
-    HostName 172.22.52.32
+Host laptop
+    HostName 172.24.2.195
+    User laptop
+    Port 22
+
+Host 50-j6
+    HostName 192.168.4.50
+    User root
+    Port 22222
+
+Host 51-j6
+    HostName 192.168.4.51
+    User root
+    Port 22222
+
+Host 51-docker
+    HostName 192.168.4.51
+    User root
+    Port 11111
+
+Host anjing
+    HostName 172.22.52.17
+    ForwardX11 yes
+    User anjing
+
+Host aa
+    HostName 172.23.129.131
+    User tianws
     Port 22
 
 Host yy
-    HostName 172.22.52.68
+    HostName 172.23.129.12
+    User tianws
     Port 22
+
+Host 102
+    HostName 172.22.64.11
+    User tianws
+    Port 22
+
+Host 103
+    HostName 172.23.129.125
+    User tianws
+    Port 22
+
+Host 123
+    HostName 172.23.129.134
+    User tianws
+    Port 22
+
+Host 124
+    HostName 192.168.144.124
+    User tianws
+    Port 22
+
+Host 189
+    HostName 192.168.144.189
+    User tianws
+    Port 22
+
+Host dd_docker
+    HostName 172.23.129.18
+    User docker
+    Port 49154
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host m5
+    HostName 10.130.1.248
+    User tianws
+    Port 22
+
+Host titan
+    HostName 172.22.52.25
+    User tianws
+    Port 22
+
+Host 48
+    HostName 192.168.4.48
+    User tianws
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 50
+    HostName 192.168.4.50
+    User tianws
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 51
+    HostName 192.168.4.51
+    User tianws
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 52
+    HostName 192.168.4.52
+    User tianws
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 53
+    HostName 192.168.4.53
+    User tianws
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 54
+    HostName 192.168.4.54
+    User user
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host 55
+    HostName 192.168.4.55
+    User user
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+Host dell
+    HostName 172.24.2.141
 
 Host *
     User tianws
+    ServerAliveInterval 60
