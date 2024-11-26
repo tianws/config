@@ -14,9 +14,10 @@ sep()
 
 sep 100 -
 
-for server in aa yy dd tuba 102 103 124
+# for server in aa yy dd tuba 102 103 123 124 room
+for server in 48 51 52 53 50
 do
-  echo -e "\e[1;4;33;46m$server\e[0m"
-  timeout 3s ssh $server "gpustat -cpu --color"
+  echo -e "\e[1;4;33;40m$server\e[0m"
+  timeout 8s ssh $server "gpustat -cpu --color"
   sep 100 -
 done
