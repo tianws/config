@@ -52,14 +52,14 @@ set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本�
 " 显示中文帮助
 if version >= 603
     set helplang=cn
-        set encoding=utf-8
-        endif
-        " 设置配色方案
-        "colorscheme murphy
-        "字体 
-        "if (has("gui_running")) 
-        "   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
-        "endif 
+    set encoding=utf-8
+endif
+" 设置配色方案
+"colorscheme murphy
+"字体 
+"if (has("gui_running")) 
+"   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
+"endif 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""实用设置
@@ -76,8 +76,8 @@ set ruler                   " 打开状态栏标尺
 set cursorline              " 突出显示当前行
 set cursorcolumn            " 突出显示当前列
 
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE "对highlight配色
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE
+"highlight CursorLine   cterm=NONE ctermbg=gray ctermfg=NONE guibg=NONE guifg=NONE "对highlight配色
+"highlight CursorColumn cterm=NONE ctermbg=gray ctermfg=NONE guibg=NONE guifg=NONE
 set magic                   " 设置魔术
 
 " set guioptions-=T           " 隐藏工具栏
