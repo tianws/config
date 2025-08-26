@@ -30,7 +30,7 @@ set smartcase
 "set lines=40 columns=155    " 设定窗口大小  
 set nu              " 显示行号  
 set go=             " 不要图形按钮  
-color desert " 设置背景主题  
+"color desert " 设置背景主题  
 "color elflord
 set guifont=Courier_New:h10:cANSI   " 设置字体  
 syntax on           " 语法高亮  
@@ -56,6 +56,7 @@ if version >= 603
 endif
 " 设置配色方案
 "colorscheme murphy
+colorscheme default
 "字体 
 "if (has("gui_running")) 
 "   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
