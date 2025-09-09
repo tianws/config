@@ -46,7 +46,7 @@ alias l='eza --classify --color-scale --icons=always --group-directories-first -
 alias ll='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --long -a --show-symlinks'
 alias lsg='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --git-ignore --git --git-repos'
 alias llg='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --git-ignore --git --git-repos --long'
-alias llt='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso -l -a --show-symlinks --total-size'
+alias llt='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso -l -a -a --show-symlinks --total-size'
  ​
 #
 # Utility functions
