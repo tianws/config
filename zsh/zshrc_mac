@@ -119,6 +119,55 @@ source $ZSH/oh-my-zsh.sh
 # brew install starship
 # brew install font-hack-nerd-font 需要换nerd字体
 eval "$(starship init zsh)"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Copy the contents of a file to the clipboard.
+#
+# copyfile <file_pathname>
+function copyfile {
+  cat $1 | pbcopy
+}
+
+# Copies the path of given directory or file to the clipboard.
+# Copy current directory if no parameter.
+function copypath {
+  # If no argument passed, use current directory
+  local file="${1:-.}"
+
+  # If argument is not an absolute path, prepend $PWD
+  [[ $file = /* ]] || file="$PWD/$file"
+
+  # Copy the absolute path without resolving symlinks
+  # If clipcopy fails, exit the function with an error
+  print -n "${file:a}" | pbcopy || return 1
+
+  echo ${(%):-"%B${file:a}%b copied to clipboard."}
+}
+
+function proxy {
+   proxy_host='127.0.0.1'
+   proxy_port=9050
+   http_proxy_url="http://$proxy_host:$proxy_port"
+   socks5_proxy_url="socks5://$proxy_host:$proxy_port"
+   export http_proxy=$http_proxy_url
+   export HTTP_PROXY=$http_proxy_url
+   export https_proxy=$http_proxy_url
+   export HTTPS_PROXY=$http_proxy_url
+   export all_proxy=$socks5_proxy_url
+   export ALL_PROXY=$socks5_proxy_url
+ }
+function unproxy {
+   unset http_proxy
+   unset HTTP_PROXY
+   unset https_proxy
+   unset HTTPS_PROXY
+   unset all_proxy
+   unset ALL_PROXY
+}
+alias ls='ls -F --color'
+alias grep='grep --color'
+alias mkdir='mkdir -pv'
+alias l='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso'
+alias ll='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --long -a --show-symlinks'
+alias lsg='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --git-ignore --git --git-repos'
+alias llg='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso --git-ignore --git --git-repos --long'
+alias llt='eza --classify --color-scale --icons=always --group-directories-first --time-style long-iso -l -a --show-symlinks --total-size'
