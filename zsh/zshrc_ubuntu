@@ -130,7 +130,7 @@ export NVM_DIR="$HOME/.nvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# apt install starship
+# curl -sS https://starship.rs/install.sh | sh # 或者apt、conda安装
 # 新建~/.config/starship.toml，写入一下以显示完整路径
 # [directory]
 # truncation_length=0
@@ -142,7 +142,7 @@ eval "$(starship init zsh)"
 #
 # copyfile <file_pathname>
 function copyfile {
-  cat $1 | pbcopy
+  cat $1 | xsel --clipboard --input
 }
 
 # Copies the path of given directory or file to the clipboard.
@@ -156,7 +156,7 @@ function copypath {
 
   # Copy the absolute path without resolving symlinks
   # If clipcopy fails, exit the function with an error
-  print -n "${file:a}" | pbcopy || return 1
+  print -n "${file:a}" | xsel --clipboard --input || return 1
 
   echo ${(%):-"%B${file:a}%b copied to clipboard."}
 }

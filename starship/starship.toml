@@ -1,3 +1,6 @@
 [directory]
 truncation_length=0
 truncate_to_repo=false
+# 服务器端可以改hostname
+[hostname]
+aliases = {"user-AS-4124GS-TNR" = "51-server"}
