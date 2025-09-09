@@ -102,3 +102,5 @@ set selectmode=mouse,key
 cmap w!! w !sudo tee > /dev/null %
 " 插入模式下按F9切换自动缩进 https://blog.csdn.net/commshare/article/details/6215088
 set pastetoggle=<F9>
+" 复制剪切到系统剪切板，Linux还需要 sudo apt install vim-gtk
+set clipboard=unnamedplus
