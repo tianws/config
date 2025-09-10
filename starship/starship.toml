@@ -1,8 +1,13 @@
+# 采用Bracketed Segments主题
+# starship preset bracketed-segments -o ~/.config/starship.toml 
+# 添加以下设置
+# 目录不截断
 [directory]
 truncation_length=0
 truncate_to_repo=false
 # 服务器端可以改hostname
 [hostname]
 aliases = {"user-AS-4124GS-TNR" = "51-server"}
+# 不根据环境变量显示ruby版本，需要在已有的[ruby]配置中增加
 [ruby]
 detect_variables = []
